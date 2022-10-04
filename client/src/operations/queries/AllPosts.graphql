@@ -1,0 +1,8 @@
+query AllPosts($filter: FilterOptions) {
+  getPosts(filter: $filter) {
+    _id
+    postTitle
+    postedAt
+    thumbnailUrl
+  }
+}

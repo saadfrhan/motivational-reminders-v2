@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="As site to watch Islamic reminders to light your emaan!" />
+  <link rel="apple-touch-icon" href="./logo.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <meta name="google-site-verification" content="Ys9SmEhqMIa4E-QhSTfjFaWc2CLZVmAdcyrErKig8EQ" />
+  <title>Motivational Reminders | Noor Ul Qur'an</title>
+</head>
+
+<style>
+  html,
+  body {
+    margin: 0px !important;
+    padding: 0px !important;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden !important;
+  }
+</style>
+
+<body style="margin: 0px !important;">
+  <div id="root"></div>
+</body>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./serviceworker.js')
+        .then((reg) => console.log('Success: ', reg.scope))
+        .catch((err) => console.log('Failure: ', err));
+    })
+  }
+</script>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0&appId=1098899187211042&autoLogAppEvents=1"
+  nonce="uIEZR2QJ"></script>
+
+</html>

@@ -1,0 +1,42 @@
+.topBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid white;
+    display: none;
+    color: white;
+    font-size: 15px !important;
+    margin: 0px !important;
+    background-color: black !important;
+    font-family: Axiforma-ExtraBold;
+    z-index: 1;
+}
+
+@media screen and (min-width: 971px) {
+    .topBar {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .topBar {
+        display: flex !important;
+        margin-left: 0px !important;
+    }
+}
+
+.text {
+    font-family: Axiforma-ExtraBold !important;
+}
+
+.goBackTop {
+    font-family: Axiforma-ExtraBold !important;
+    width: 10px;
+    height: 10px;
+    margin: 0px !important;
+}
+
+.iconStyle {
+    color: white !important;
+}

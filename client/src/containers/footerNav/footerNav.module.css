@@ -1,0 +1,39 @@
+ .footerLabel {
+     color: white !important;
+ }
+
+ .icon {
+     color: white;
+     margin: 0 !important;
+     padding: 0 !important;
+     width: 25px !important;
+     margin-bottom: 20px !important;
+     height: 25px !important;
+ }
+
+ .footerBar {
+     position: absolute;
+     bottom: 0px;
+     padding: 0px !important;
+     width: 100% !important;
+     background-color: black !important;
+     margin: 0px !important;
+     max-height: 100px;
+     width: 100%;
+     justify-content: space-around !important;
+     color: white !important;
+     position: fixed;
+ }
+
+ @media screen and (min-width: 971px) {
+     .footerBar {
+         display: none !important;
+     }
+ }
+
+ @media screen and (max-width: 970px) {
+     .footerBar {
+         display: flex;
+         margin-left: 0px !important;
+     }
+ }

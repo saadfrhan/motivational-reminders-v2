@@ -1,0 +1,5 @@
+mutation UpdatePost($input: PostInput) {
+  updatePost(input: $input) {
+    confirmationMessage
+  }
+}

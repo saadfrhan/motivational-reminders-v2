@@ -1,0 +1,10 @@
+query Post($id: String!) {
+  getPost(_id: $id) {
+    postTitle
+    postType
+    postLink
+    postedAt
+    thumbnailUrl
+    _id
+  }
+}

@@ -1,0 +1,6 @@
+query TotalNumberOfPostsOfEachCategory {
+  getTotalNumberOfPosts {
+    totalPosts
+    name
+  }
+}
