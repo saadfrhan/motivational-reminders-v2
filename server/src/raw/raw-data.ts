@@ -1,0 +1,19 @@
+export const categories = [
+    { "name": "Rabi Ul Awwal" },
+    { "name": "Recitations" },
+    { "name": "Taqwa" },
+    { "name": "Fiqh" },
+    { "name": "Muslim Heroes" },
+    { "name": "The Paradise" },
+    { "name": "Qur'an" },
+    { "name": "Health" },
+    { "name": "Salah" },
+    { "name": "Supplications" },
+    { "name": "Charity" },
+    { "name": "Hereafter" },
+    { "name": "History" },
+    { "name": "Good Ethics" },
+    { "name": "Bad deeds" },
+    { "name": "Life Problems" },
+    { "name": "Other" }
+]
