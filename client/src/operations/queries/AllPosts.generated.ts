@@ -17,7 +17,7 @@ export type AllPostsQueryVariables = Types.Exact<{
 }>;
 
 
-export type AllPostsQuery = { __typename?: 'Query', getPosts: Array<{ __typename?: 'Post', _id: string, postTitle: string, postedAt?: any | null | undefined, thumbnailUrl: string } | null | undefined> };
+export type AllPostsQuery = { __typename?: 'Query', getPosts: Array<Types.Post> };
 
 
 export const AllPostsDocument = `

@@ -1,22 +1,35 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import PostsInAList from '../components/PostInAList/PostInAList'
 import SingleVideo from '../components/SingleVideo/SingleVideo'
 import UpdateAPost from '../components/UpdateAPost/UpdateAPost'
 import Videos from '../components/Videos/Videos'
 import Playlists from '../components/Playlists/Playlists'
 import VideosOfSpecificCategory from '../components/VideosOfSpecificCategory/VideosOfSpecificCategory'
+import NavBar from '../containers/navBar/navBar'
+import FooterNav from '../containers/footerNav'
 
-const Routes = () => {
-    return (<Switch>
-        <Route path='/' exact component={Videos} />
-        <Route path='/video/:id' component={SingleVideo} />
-        <Route path='/playlists/:category' component={VideosOfSpecificCategory} />
-        <Route path="/playlists" component={Playlists} />
-        <Route path='/posts/list' component={PostsInAList} />
-        <Route path='/posts/update/:id' component={UpdateAPost} />
-        <Route path='*' component={() => <h2>404 Not Found</h2>} />
-    </Switch>)
+const RoutesConfig = () => {
+  return (
+    <div>
+
+      <NavBar />
+
+      <div>
+        <Routes>
+          <Route path='/' element={<Videos />} />
+          <Route path='video/:id' element={<SingleVideo />} />
+          <Route path='playlists/:category' element={<VideosOfSpecificCategory />} />
+          <Route path="playlists" element={<Playlists />} />
+          <Route path='posts/list' element={<PostsInAList />} />
+          <Route path='posts/update/:id' element={<UpdateAPost />} />
+          <Route path='*' element={<h2>404 Not Found</h2>} />
+        </Routes>
+      </div>
+
+      <FooterNav />
+    </div>
+  )
 }
 
-export default Routes
+export default RoutesConfig

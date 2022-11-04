@@ -7,7 +7,7 @@ import PlayCircleOutlineSharpIcon from '@mui/icons-material/PlayCircleOutlineSha
 import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 
-import muiStyles from './styles';
+// import muiStyles from './styles';
 import styles from './footerNav.module.css';
 
 import cx from 'classnames';
@@ -17,10 +17,12 @@ const FooterNav = () => {
 
     const [active, setActive] = useState<string>('home');
 
-    const classes = muiStyles();
+    // const classes = muiStyles();
 
     return (
-        <BottomNavigation className={cx(classes.root1, styles.footerBar)}>
+        <BottomNavigation className={cx(
+            // classes.root1, 
+            styles.footerBar)}>
             <Link to='/' className={styles.footerLabel} onClick={() => setActive('videos')}>
                 <BottomNavigationAction className={styles.footerLabel}
                     icon={active === 'home' ? <PlayCircleFilledIcon className={styles.icon} /> : <PlayCircleOutlineSharpIcon className={styles.icon} />}

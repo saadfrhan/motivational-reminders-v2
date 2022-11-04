@@ -53,7 +53,10 @@ export const resolvers = {
                 if (filter?.getLast) {
                     return await post.find({}).limit(filter.getLast);
                 }
-                return foundPosts;
+                if (!filter) {
+                    return await post.find({});
+                }
+                return await post.find({});
             } catch (error: any) {
                 throw new Error(error)
             }

@@ -5,20 +5,20 @@ export const typeDefs = gql`
     scalar Date  
 
     type Post {
-        _id: String!
-        postTitle: String!
-        postType: String!
-        postLink: String!
+        _id: String
+        postTitle: String
+        postType: String
+        postLink: String
         postedAt: Date
-        thumbnailUrl: String!
+        thumbnailUrl: String
     }
 
     input PostInput {
-        postTitle: String!
-        postType: String!
-        postLink: String!
-        postedAt: Date!
-        thumbnailUrl: String!
+        postTitle: String
+        postType: String
+        postLink: String
+        postedAt: Date
+        thumbnailUrl: String
     }
 
     input FilterOptions {
@@ -28,19 +28,19 @@ export const typeDefs = gql`
     }
 
     type Message {
-        confirmationMessage: String!
+        confirmationMessage: String
     }
 
     type Category {
-        name: String!
-        totalPosts: Int!
+        name: String
+        totalPosts: Int
     }
 
     type Query {
-        getPosts(filter: FilterOptions): [Post]!
-        getPost(_id: String!): Post!
-        getTotalNumberOfPosts: [Category]!
-        getPostsOfOneCategory(category: String!): [Post]!
+        getPosts(filter: FilterOptions): [Post]
+        getPost(_id: String): Post
+        getTotalNumberOfPosts: [Category]
+        getPostsOfOneCategory(category: String): [Post]
     }
 
     type Mutation {

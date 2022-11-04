@@ -1,33 +1,48 @@
-import { AppBar, Toolbar, Typography, Button } from '@mui/material';
+import { AppBar, Toolbar, Typography, Box, IconButton } from '@mui/material';
 import React, { useState } from 'react';
 import PlayArrowSharpIcon from '@mui/icons-material/PlayArrowSharp';
 import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined';
 import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import PlayArrowOutlinedIcon from '@mui/icons-material/PlayArrowOutlined';
 import { Link } from 'react-router-dom';
-import muiStyles from '../../styles';
-import styles from './navBar.module.css'
-import cx from 'classnames';
+// import muiStyles from '../../styles';
+import { styled } from '@mui/material/styles';
 
+const StyledLink = styled(Link)`
+  color: white;
+`;
 
 const NavBar = () => {
 
-    const classes = muiStyles();
+    // const classes = muiStyles();
 
     const [active, setActive] = useState('home');
 
-    return (<AppBar position='static'>
-        <Toolbar className={styles.appBar}>
-            <Typography variant='h6' className={cx(classes.navbar__title, styles.text)}>
+    return (<Box sx={{ flexGrow: 1 }}><AppBar position='static'>
+        <Toolbar>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                 Motivational Reminders | Noor Ul Qur'an
             </Typography>
-            <div className='links-bar'>
-                <Link to='/' className={classes.navbar__link} onClick={() => setActive('videos')}>
-                    <Button color='inherit' className={styles.text}>{active === 'videos' ? <PlayArrowSharpIcon className={styles.iconStyle} /> : <PlayArrowOutlinedIcon className={styles.iconStyle} />}Videos</Button></Link>
-                <Link to='/videos' className={classes.navbar__link} onClick={() => setActive('playlists')}> <Button color='inherit' className={styles.text}>{active === 'playlists' ? <SubscriptionsIcon className={styles.iconStyle} /> : <SubscriptionsOutlinedIcon className={styles.iconStyle} />}Playlists</Button></Link>
+            <div>
+                <IconButton
+                    size="large"
+                    aria-label="account of current user"
+                    aria-controls="menu-appbar"
+                    aria-haspopup="true"
+                    color="inherit"
+                ><StyledLink to='/'
+                    onClick={() => setActive('videos')}>{active === 'videos' ? <PlayArrowSharpIcon /> : <PlayArrowOutlinedIcon />}</StyledLink></IconButton>
+                <IconButton
+                    size="large"
+                    aria-label="account of current user"
+                    aria-controls="menu-appbar"
+                    aria-haspopup="true"
+                    color="inherit"
+                ><StyledLink to='/playlists'
+                    onClick={() => setActive('playlists')}>{active === 'playlists' ? <SubscriptionsIcon /> : <SubscriptionsOutlinedIcon />}</StyledLink></IconButton>
             </div>
         </Toolbar>
-    </AppBar>)
+    </AppBar></Box>)
 }
 
 export default NavBar

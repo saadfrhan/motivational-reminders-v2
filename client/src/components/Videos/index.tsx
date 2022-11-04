@@ -31,7 +31,7 @@ const VideoContainer = ({ posts, setCursor }: PostData) => {
                                     </Link>
                                     <div className='post-metadata'>
                                         <p className='title'>{post?.postTitle}</p>
-                                        <span className='date'>{formatDistance(new Date(post?.postedAt), new Date(), { addSuffix: true })}</span>
+                                        {/* <span className='date'>{formatDistance(new Date(post?.postedAt), new Date(), { addSuffix: true })}</span> */}
                                     </div>
                                 </Grid>
                             </>

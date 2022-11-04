@@ -1,0 +1,8 @@
+.App {
+  overflow: hidden !important;
+}
+
+.main {
+  height: 100%;
+  overflow: hidden !important;
+}

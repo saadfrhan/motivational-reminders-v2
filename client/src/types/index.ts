@@ -1,4 +1,4 @@
-import { AllPostsQuery } from "../operations/queries/AllPosts.generated";
+import { Post as PostI } from '../app/services/types.generated';
 
 export interface TopNavOptions {
     title: string | boolean;
@@ -9,12 +9,14 @@ export interface TopNavOptions {
 export interface Post {
     __typename: string;
     _id: string;
+    postLink: string;
+    postType: string;
     postTitle: string;
     postedAt?: any;
     thumbnailUrl: string;
 }
 
 export interface PostData {
-    posts: Post[]
+    posts: PostI[]
     setCursor: Function;
 }

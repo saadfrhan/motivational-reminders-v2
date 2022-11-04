@@ -5,7 +5,7 @@ import { usePostQuery } from '../../operations/queries/Post.generated';
 
 const SingleVideo = () => {
 
-    const { id }: { id: string; } = useParams();
+    const { id }: any = useParams();
 
     const { data, isError } = usePostQuery({ id })
     // const { data: videoPile, isLoading: isVideoPileLoading } = useAllPostsQuery();
